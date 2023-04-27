@@ -20,6 +20,10 @@ body {
   color: rgba(0, 0, 0, 0.87);
 }
 
+.card {
+  @apply bg-gray-100 p-8 rounded-md shadow-sm;
+}
+
 .link:before {
   @apply absolute content-[""] w-full !h-[2.05px] bottom-0 left-0 bg-yellow-600 invisible;
   transform: scaleX(0);
@@ -60,4 +64,88 @@ body {
   transition: opacity 0.25s;
   -webkit-animation: 0;
   animation: 0;
+}
+
+/* test */
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+::before,
+::after {
+  position: absolute;
+  content: "";
+}
+
+.animated {
+  position: relative;
+  /* display: inline-block; */
+  /* width: auto; */
+  /* height: auto; */
+  /* background-color: transparent; */
+  border: none;
+  cursor: pointer;
+  margin: 15px;
+  /* min-width: 150px; */
+}
+/* .animated span {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  transition: 0.3s;
+} */
+
+/*--- btn-3 ---*/
+.animated::before,
+.animated::after {
+  background: transparent;
+  z-index: 2;
+}
+
+/* 15. hover-border-5 */
+.animated::before,
+.animated::after {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+}
+.animated::before {
+  top: 0;
+  right: 0;
+  border-top: 3px solid rgb(202 138 4 / var(--tw-bg-opacity));
+  border-left: 3px solid rgb(202 138 4 / var(--tw-bg-opacity));
+  transition: width 0.2s 0.5s ease-out, height 0.15s 0.35s linear,
+    opacity 0s 0.7s;
+  @apply rounded-md;
+}
+.animated::after {
+  bottom: 0;
+  left: 0px;
+  border-bottom: 3px solid rgb(202 138 4 / var(--tw-bg-opacity));
+  border-right: 3px solid rgb(202 138 4 / var(--tw-bg-opacity));
+  transition: width 0.2s 0.15s linear, height 0.15s ease-in, opacity 0s 0.35s;
+  @apply rounded-md;
+}
+.animated:hover::before,
+.animated:hover::after {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.animated:hover::before {
+  transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s; /* 1,2 */
+}
+.animated:hover::after {
+  transition: width 0.2s 0.35s linear, height 0.15s 0.5s ease-out,
+    opacity 0s 0.3s;
 }

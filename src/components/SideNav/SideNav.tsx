@@ -9,16 +9,13 @@ import Title from './Title.js';
 function SideNav() {
     const links = [
         { url: '/', title: 'Home' },
-        { url: '/experiences', title: 'Experience' },
-        { url: '/education', title: 'Education' },
-        { url: '/skills', title: 'Skills' },
+        { url: '/projects', title: 'Projects' }
     ];
     const router = useRouter()
-    console.log(router)
 
     return (
         <div className='flex flex-col md:flex-row h-full space-y-20 md:space-y-0 md:space-x-20'>
-            <div className="Home text-center space-y-10 flex-none my-auto w-80">
+            <div className="Home text-center space-y-10 flex-none my-auto w-96">
                 <Title />
                 <Image className='rounded-full h-48 w-48 mx-auto shadow-md' src={picture} alt='test' />
                 <div className="Navigation flex flex-col space-y-2 w-fit mx-auto">
