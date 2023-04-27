@@ -1,19 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Source+Code+Pro:wght@300&display=swap");
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background-start-rgb: 200 222 210;
+  --background-end-rgb: 200 222 210;
 }
 
 body {
@@ -24,4 +16,48 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: "Source Code Pro", monospace;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.link:before {
+  @apply absolute content-[""] w-full !h-[2.05px] bottom-0 left-0 bg-yellow-600 invisible;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.link:hover:before,
+.link.active:before {
+  @apply visible;
+  transform: scaleX(1);
+}
+
+.typed-cursor {
+  @apply text-4xl;
+  opacity: 1;
+  animation: typedjsBlink 0.4s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+  animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink {
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes typedjsBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.typed-fade-out {
+  opacity: 0;
+  transition: opacity 0.25s;
+  -webkit-animation: 0;
+  animation: 0;
 }
