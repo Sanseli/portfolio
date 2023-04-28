@@ -65,9 +65,7 @@ body {
   -webkit-animation: 0;
   animation: 0;
 }
-
-/* test */
-
+ 
 :active,
 :hover,
 :focus {
@@ -81,38 +79,16 @@ body {
 }
 
 .animated {
-  position: relative;
-  /* display: inline-block; */
-  /* width: auto; */
-  /* height: auto; */
-  /* background-color: transparent; */
   border: none;
   cursor: pointer;
-  margin: 15px;
-  /* min-width: 150px; */
 }
-/* .animated span {
-  position: relative;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px 20px;
-  transition: 0.3s;
-} */
 
-/*--- btn-3 ---*/
 .animated::before,
 .animated::after {
   background: transparent;
   z-index: 2;
 }
 
-/* 15. hover-border-5 */
 .animated::before,
 .animated::after {
   width: 0%;

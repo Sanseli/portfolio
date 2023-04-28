@@ -21,7 +21,8 @@ export default function Home() {
             id: 3,
             title: 'Crescendo 2',
             description: 'Remake of old application.',
-            tools: ['nuxt', 'vue', 'tailwind', 'jest', 'laravel', 'docker', 'postgresql']
+            tools: ['nuxt', 'vue', 'tailwind', 'jest', 'laravel', 'docker', 'postgresql'],
+            link: undefined
         }
     ]
 
