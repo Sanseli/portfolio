@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 200 222 210;
   --background-end-rgb: 200 222 210;
+  height: 100%;
 }
 
 body {
@@ -18,6 +19,11 @@ body {
     rgb(var(--background-start-rgb));
   font-family: "Source Code Pro", monospace;
   color: rgba(0, 0, 0, 0.87);
+  height: 100%
+}
+
+#__next {
+  height: 100%;
 }
 
 .card {
@@ -124,4 +130,20 @@ body {
 .animated:hover::after {
   transition: width 0.2s 0.35s linear, height 0.15s 0.5s ease-out,
     opacity 0s 0.3s;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

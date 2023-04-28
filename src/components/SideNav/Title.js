@@ -11,6 +11,7 @@ const Title = () => {
     	strings: [
         'Hello I&apos;m Lisa',
         'Hallo ik ben Lisa',
+        'Hei minä olen Lisa'
       ],
       typeSpeed: 100,
       backSpeed: 100,
@@ -25,7 +26,7 @@ const Title = () => {
   }, []);
 
   return (
-    <div className="wrap">
+    <div className="wrap h-10">
       <div className="type-wrap">
         <span className='font-lekton text-4xl' style={{whiteSpace: 'pre'}} ref={el} />
       </div>

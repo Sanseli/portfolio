@@ -10,7 +10,7 @@ export default function Home() {
   }
 
   return (
-    <main>
+    <main className="self-center">
       <div className="Home md:overflow-y-auto space-y-4 text-base card">
         <p>
           <span className="flex space-x-1">Hi! I&apos;m Lisa Sansen, I&apos;m from

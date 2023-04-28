@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 const Project = ({ project }: any) => {
     const router = useRouter()
 
-    return (<div className={`card space-y-4 flex flex-col m-3 relative ${project.link ? 'animated' : ''}`} onClick={() => project.link ? router.push(project.link) : ''}>
+    return (<div className={`card space-y-4 flex flex-col m-3 relative animation-element slide-up testimonial ${project.link ? 'animated' : ''}`} onClick={() => project.link ? router.push(project.link) : ''}>
         <h2 className=" text-lg font-bold text-yellow-600">{project.title}</h2>
         <p>{project.description}</p>
         <div className="grow" />
