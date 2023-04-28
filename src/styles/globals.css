@@ -131,19 +131,3 @@ body {
   transition: width 0.2s 0.35s linear, height 0.15s 0.5s ease-out,
     opacity 0s 0.3s;
 }
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}

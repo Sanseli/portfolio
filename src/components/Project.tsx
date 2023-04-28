@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router'
 
-const Project = ({ project }: any) => {
+const Project = ({ project, index, currentIndex }: any) => {
     const router = useRouter()
 
     return (
-        <div className='snap-center h-auto md:h-full flex'>
-            <div className={`card space-y-4 flex flex-col my-auto mx-10 w-full relative ${project.link ? 'animated' : ''}`} onClick={() => project.link ? router.push(project.link) : ''}>
+        <div className='snap-center h-auto md:h-full flex' id={index}>
+            <div className={`card space-y-4 flex flex-col my-auto ml-10 md:ml-0 mr-10 w-full relative ${project.link ? 'animated' : ''} ${index !== currentIndex ? 'md:opacity-20 transition-opacity duration-500' : ''}`} onClick={() => project.link ? router.push(project.link) : ''}>
                 <h2 className=" text-lg font-bold text-yellow-600">{project.title}</h2>
                 <p>{project.description}</p>
                 <div className="grow" />

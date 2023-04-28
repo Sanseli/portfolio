@@ -1,7 +1,7 @@
 import Project from "@/components/Project";
+import { useState, useEffect } from 'react'
 
 export default function Home() {
-
     const projects = [
         {
             id: 1,
@@ -25,9 +25,43 @@ export default function Home() {
         }
     ]
 
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+
+    const scrollUp = () => {
+        var elmntToView = document.getElementById((currentIndex - 1).toString());
+        if (elmntToView) {
+            elmntToView.scrollIntoView();
+            setCurrentIndex(currentIndex - 1)
+        }
+    }
+
+    const scrollDown = () => {
+        var elmntToView = document.getElementById((currentIndex + 1).toString());
+        console.log(elmntToView)
+        if (elmntToView) {
+            elmntToView.scrollIntoView();
+            setCurrentIndex(currentIndex + 1)
+        }
+    }
+
     return (
-        <main className="md:overflow-auto md:scroll-smooth md:snap-y md:snap-mandatory space-y-10 pb-10">
-            {projects.map(project => <Project project={project} key={project.id} />)}
+        <main className="flex">
+            <div className="h-full md:overflow-hidden md:scroll-smooth md:snap-y md:snap-mandatory space-y-10 mb-20 md:mb-0">
+                {projects.map((project, index) => <Project project={project} index={index} currentIndex={currentIndex} key={project.id} />)}
+            </div>
+            <div className="self-center space-y-3 hidden md:block">
+                <button onClick={scrollUp}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" className="h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18" />
+                    </svg>
+                </button>
+                <button onClick={scrollDown}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" className="h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
+                    </svg>
+                </button>
+            </div>
         </main>
     )
 }

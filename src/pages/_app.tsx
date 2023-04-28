@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/favicon.ico" />
         <title>Lisa Sansen</title>
       </Head>
-      <div className='flex flex-col md:flex-row h-full space-y-20 md:space-y-0 md:space-x-20 py-10 md:p-20'>
+      <div className='flex flex-col md:flex-row md:h-full space-y-20 md:space-y-0 md:space-x-20 py-10 md:p-20'>
         <SideNav />
         <Component {...pageProps} />
       </div>

@@ -10,7 +10,7 @@ export default function Home() {
   }
 
   return (
-    <main className="self-center mx-10 md:mx-0 pb-10 md:pb-0">
+    <main className="self-center mx-10 md:mx-0 !mb-20 md:!mb-0">
       <div className="Home md:overflow-y-auto space-y-4 text-base card">
         <p>
           Hi! I&apos;m Lisa Sansen, I&apos;m from
