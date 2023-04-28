@@ -26,7 +26,7 @@ export default function Home() {
     ]
 
     return (
-        <main className="overflow-auto scroll-smooth snap-y snap-mandatory">
+        <main className="md:overflow-auto md:scroll-smooth md:snap-y md:snap-mandatory space-y-10 pb-10">
             {projects.map(project => <Project project={project} key={project.id} />)}
         </main>
     )

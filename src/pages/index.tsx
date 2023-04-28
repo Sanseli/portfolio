@@ -10,29 +10,26 @@ export default function Home() {
   }
 
   return (
-    <main className="self-center">
+    <main className="self-center mx-10 md:mx-0 pb-10 md:pb-0">
       <div className="Home md:overflow-y-auto space-y-4 text-base card">
         <p>
-          <span className="flex space-x-1">Hi! I&apos;m Lisa Sansen, I&apos;m from
-            <span className="px-2 self-center pb-[2px]">
-              <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-be" className="w-4 rounded-sm" viewBox="0 0 640 480">
-                <g fillRule="evenodd" strokeWidth="1pt">
-                  <path d="M0 0h213.3v480H0z" />
-                  <path fill="#ffd90c" d="M213.3 0h213.4v480H213.3z" />
-                  <path fill="#f31830" d="M426.7 0H640v480H426.7z" />
-                </g>
-              </svg>
-            </span>
-            Belgium but currently living in
-            <span className="px-2 self-center pb-[2px]">
-              <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-fi" className="w-4 rounded-sm" viewBox="0 0 640 480">
-                <path fill="#fff" d="M0 0h640v480H0z" />
-                <path fill="#002f6c" d="M0 174.5h640v131H0z" />
-                <path fill="#002f6c" d="M175.5 0h130.9v480h-131z" />
-              </svg>
-            </span>
-            Finland.
+          Hi! I&apos;m Lisa Sansen, I&apos;m from
+          <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-be" className="w-4 rounded-sm inline m-2 relative bottom-[2px]" viewBox="0 0 640 480">
+            <g fillRule="evenodd" strokeWidth="1pt">
+              <path d="M0 0h213.3v480H0z" />
+              <path fill="#ffd90c" d="M213.3 0h213.4v480H213.3z" />
+              <path fill="#f31830" d="M426.7 0H640v480H426.7z" />
+            </g>
+          </svg>
+          Belgium but currently living in
+          <span className="px-2 self-center pb-[2px] inline">
+            <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-fi" className="w-4 rounded-sm inline relative bottom-[2px]" viewBox="0 0 640 480">
+              <path fill="#fff" d="M0 0h640v480H0z" />
+              <path fill="#002f6c" d="M0 174.5h640v131H0z" />
+              <path fill="#002f6c" d="M175.5 0h130.9v480h-131z" />
+            </svg>
           </span>
+          Finland.
         </p>
         <p>
           I&apos;ve been working as a software developer since 2019, and because I love being creative I&apos;m mostly interested and experienced in the front-end area.
