@@ -15,9 +15,9 @@ function SideNav() {
 
     return (
         <div className='flex flex-col lg:flex-row h-full space-y-20 lg:space-y-0 lg:space-x-20'>
-            <div className="Home text-center space-y-10 flex-none my-auto w-96 self-center">
+            <div className="Home text-center space-y-6 lg:space-y-10 flex-none my-auto w-full md:w-96 self-center">
                 <Title />
-                <Image className='rounded-full h-48 w-48 mx-auto shadow-lg' src={picture} alt='test' />
+                <Image className='rounded-full h-36 w-36 md:h-48 md:w-48 mx-auto shadow-lg' src={picture} alt='test' />
                 <div className="Navigation flex flex-col space-y-2 w-fit mx-auto">
                     {links.map(function (link, i) {
                         return (
