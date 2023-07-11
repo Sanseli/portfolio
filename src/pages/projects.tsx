@@ -46,10 +46,10 @@ export default function Home() {
 
     return (
         <main className="flex">
-            <div className="h-full md:overflow-hidden md:scroll-smooth md:snap-y md:snap-mandatory space-y-10 mb-20 md:mb-0">
+            <div className="h-full lg:overflow-hidden lg:scroll-smooth lg:snap-y lg:snap-mandatory space-y-10 mb-20 lg:mb-0">
                 {projects.map((project, index) => <Project project={project} index={index} currentIndex={currentIndex} key={project.id} />)}
             </div>
-            <div className="self-center space-y-3 hidden md:flex flex-col">
+            <div className="self-center space-y-3 hidden lg:flex flex-col">
                 <button onClick={scrollUp} className={`${currentIndex > 0 ? 'hover:-translate-y-2 transition duration-200' : 'cursor-default opacity-60'}`}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" className="h-8" style={{ filter: 'drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4))' }}>
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18" />

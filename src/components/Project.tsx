@@ -4,10 +4,10 @@ const Project = ({ project, index, currentIndex }: any) => {
     const router = useRouter()
 
     return (
-        <div className='snap-center h-auto md:h-full flex' id={index}>
-            <div className={`card space-y-4 flex flex-col my-auto ml-10 md:ml-0 mr-10 w-full relative ${project.link ? 'animated' : ''} ${index !== currentIndex ? 'md:opacity-20 transition-opacity duration-500' : ''}`} onClick={() => project.link ? router.push(project.link) : ''}>
+        <div className='snap-center h-auto lg:h-full flex' id={index}>
+            <div className={`card text-base space-y-4 flex flex-col my-auto ml-10 lg:ml-0 mr-10 w-full relative ${project.link ? 'animated' : ''} ${index !== currentIndex ? 'lg:opacity-20 transition-opacity duration-500' : ''}`} onClick={() => project.link ? router.push(project.link) : ''}>
                 <h2 className=" text-lg font-bold text-yellow-600">{project.title}</h2>
-                <p>{project.description}</p>
+                <p className='text-base'>{project.description}</p>
                 <div className="grow" />
                 <div>
                     <p>Stack:</p>

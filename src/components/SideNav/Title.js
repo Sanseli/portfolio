@@ -28,7 +28,7 @@ const Title = () => {
   return (
     <div className="wrap h-10">
       <div className="type-wrap">
-        <span className='font-lekton text-4xl' style={{whiteSpace: 'pre'}} ref={el} />
+        <span className='font-lekton text-2xl md:text-4xl' style={{whiteSpace: 'pre'}} ref={el} />
       </div>
     </div>
   );
