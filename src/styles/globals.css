@@ -27,7 +27,7 @@ body {
 }
 
 .card {
-  @apply bg-gray-100 p-8 rounded-md shadow-sm;
+  @apply bg-gray-100 p-8 rounded-lg shadow-sm;
 }
 
 .link:before {
@@ -108,7 +108,7 @@ body {
   border-left: 3px solid rgb(202 138 4 / var(--tw-bg-opacity));
   transition: width 0.2s 0.5s ease-out, height 0.15s 0.35s linear,
     opacity 0s 0.7s;
-  @apply rounded-md;
+  @apply rounded-lg;
 }
 .animated::after {
   bottom: 0;
@@ -116,7 +116,7 @@ body {
   border-bottom: 3px solid rgb(202 138 4 / var(--tw-bg-opacity));
   border-right: 3px solid rgb(202 138 4 / var(--tw-bg-opacity));
   transition: width 0.2s 0.15s linear, height 0.15s ease-in, opacity 0s 0.35s;
-  @apply rounded-md;
+  @apply rounded-lg;
 }
 .animated:hover::before,
 .animated:hover::after {
@@ -130,20 +130,4 @@ body {
 .animated:hover::after {
   transition: width 0.2s 0.35s linear, height 0.15s 0.5s ease-out,
     opacity 0s 0.3s;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
