@@ -2,6 +2,8 @@ import Project from "@/components/Project";
 import { useState, useEffect } from 'react'
 
 export default function Home() {
+    const [currentIndex, setCurrentIndex] = useState(0)
+
     const [projects, setProjects] = useState([
         {
             id: 1,
@@ -14,7 +16,6 @@ export default function Home() {
             id: 2,
             title: 'Snellehap Website',
             description: 'Small singlepage website for sandwich bar.',
-            link: 'https://snellehap.be/',
             tools: ['next', 'tailwind']
         },
         {
@@ -25,7 +26,14 @@ export default function Home() {
         }
     ])
 
-    const [currentIndex, setCurrentIndex] = useState(0)
+
+    const handleScroll = (event: any) => {
+        if (event.nativeEvent.wheelDelta > 0) {
+            scrollUp()
+        } else {
+            scrollDown()
+        }
+    };
 
 
     const scrollUp = () => {
@@ -45,7 +53,7 @@ export default function Home() {
     }
 
     return (
-        <main className="flex">
+        <main className="flex" onWheel={handleScroll}>
             <div className="h-full lg:overflow-hidden lg:scroll-smooth lg:snap-y lg:snap-mandatory space-y-10 mb-20 lg:mb-0">
                 {projects.map((project, index) => <Project project={project} index={index} currentIndex={currentIndex} key={project.id} />)}
             </div>
