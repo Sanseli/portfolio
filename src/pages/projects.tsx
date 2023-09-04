@@ -20,8 +20,9 @@ export default function Home() {
         },
         {
             id: 3,
-            title: 'Crescendo 2',
-            description: '',
+            title: 'Belgian Government - Crescendo 2',
+            description: 'Employee evaluation application',
+            link: 'https://bosa.belgium.be/nl/applications/crescendo',
             tools: ['nuxt', 'vue', 'tailwind', 'jest', 'laravel']
         }
     ])
